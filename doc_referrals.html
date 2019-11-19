@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- fontawesome CSS -->
+    <link href="assets/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.css">
+
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <title>title</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark adminColor">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/doctors.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Logo
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Главная <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Направления</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Лаборатории</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Результаты анализов</a>
+                    </li>
+                </ul>
+
+                <div class="rightNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Рус <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Укр</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="navbar-nav">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            user
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <main role="main" class="content">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-xl-4">
+
+                    <div class="whiteBg">
+                        <div class="calendar">
+                            <h4 class="page-header">
+                                <i class="fa fa-calendar"></i> Календарь записей
+                            </h4>
+                            <div id="datetimepickerMain"></div>
+                        </div>
+
+                        <table class="table table-sm table-bordered">
+                            <tbody>
+                            <tr>
+                                <td>к-во пациентов</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td>к-во анализов</td>
+                                <td>34</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <button id="modalAddBtn" type="button" class="btn btn-lg btn-adminColor btn-block"
+                                data-toggle="modal" data-target="#addAnalysis" data-whatever="">Добавить анализ
+                        </button>
+                    </div>
+
+                    <div class="whiteBg table-responsive">
+                        <table class="table table-sm table-bordered">
+                            <tbody>
+                            <tr>
+                                <td>лаб 1</td>
+                            </tr>
+                            <tr>
+                                <td>лаб 2</td>
+                            </tr>
+                            <tr>
+                                <td>лаб 3</td>
+                            </tr>
+                            <tr>
+                                <td>лаб 4</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+                <div class="col-xl-8">
+                    <div class="whiteBg table-responsive">
+                        <table class="table table-sm table-bordered">
+                            <thead>
+                            <tr>
+                                <th scope="col">Код</th>
+                                <th scope="col">ФИО</th>
+                                <th scope="col">Дата рождения</th>
+                                <th scope="col">Пол</th>
+                                <th scope="col">Телефон</th>
+                                <th scope="col" class="text-center">Печать</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>12</td>
+                                <td>Пупкин А. А.</td>
+                                <td>08.03.2000</td>
+                                <td>м</td>
+                                <td>39238452637</td>
+                                <td class="text-center"><a href="#" class="printIcon"><i class="fas fa-print"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Пупкин А. А.</td>
+                                <td>08.03.2000</td>
+                                <td>м</td>
+                                <td>39238452637</td>
+                                <td class="text-center"><a href="#" class="printIcon"><i class="fas fa-print"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Пупкин А. А.</td>
+                                <td>08.03.2000</td>
+                                <td>м</td>
+                                <td>39238452637</td>
+                                <td class="text-center"><a href="#" class="printIcon"><i class="fas fa-print"></i></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination justify-content-end">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item active">
+                                    <span class="page-link">
+                                        3
+                                        <span class="sr-only">(current)</span>
+                                    </span>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <div class="modal fade" id="addAnalysis" tabindex="-1" role="dialog" aria-labelledby="addAnalysisLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addAnalysisLabel">Анализ на <span class="modal-date"></span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="input-group mt-2">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="selectLaboratory">Выберите лабораторию</label>
+                            </div>
+                            <select class="form-control" id="selectLaboratory">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="surname" class="sr-only">Фамилия</label>
+                                <input type="text" class="form-control mt-2" id="surname" placeholder="Фамилия">
+                            </div>
+                            <div class="col">
+                                <label for="name" class="sr-only">Имя</label>
+                                <input type="text" class="form-control mt-2" id="name" placeholder="Имя">
+                            </div>
+                            <div class="col">
+                                <label for="middleName" class="sr-only">Отчество</label>
+                                <input type="text" class="form-control mt-2" id="middleName" placeholder="Отчество">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="dob" class="sr-only">Дата рождения</label>
+                                <input type="text" class="form-control mt-2" id="dob" placeholder="Дата рождения" required>
+                            </div>
+                            <div class="col">
+                                <label for="phone" class="sr-only">Телефон</label>
+                                <input type="text" class="form-control mt-2" id="phone" placeholder="Телефон" required>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive mt-3">
+                            <table class="table table-sm table-bordered">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Код анализа</th>
+                                    <th scope="col">Название</th>
+                                    <th scope="col">Срок выполнения</th>
+                                    <th scope="col">Заметка от лаборатории</th>
+                                    <th scope="col">Заметка от врача</th>
+                                    <th scope="col" class="text-center">Удалить?</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><input type="text" class="form-control" placeholder="Код анализа"></td>
+                                    <td><input type="text" class="form-control" placeholder="Название"></td>
+                                    <td><input type="text" class="form-control" placeholder="Срок выполнения"></td>
+                                    <td><textarea class="form-control"
+                                                  placeholder="Заметка от лаборатории"></textarea></td>
+                                    <td><textarea class="form-control"
+                                                  placeholder="Заметка от врача"></textarea></td>
+                                    <td class="text-center"><a href="#" class="trashIcon"><i
+                                            class="fas fa-trash"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" class="form-control" placeholder="Код анализа"></td>
+                                    <td><input type="text" class="form-control" placeholder="Название"></td>
+                                    <td><input type="text" class="form-control" placeholder="Срок выполнения"></td>
+                                    <td><textarea class="form-control"
+                                                  placeholder="Заметка от лаборатории"></textarea></td>
+                                    <td><textarea class="form-control"
+                                                  placeholder="Заметка от врача"></textarea></td>
+                                    <td class="text-center"><a href="#" class="trashIcon"><i
+                                            class="fas fa-trash"></i></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <a href="#"><i class="fas fa-plus"></i> Добавить</a>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Отменить</button>
+                    <button type="button" class="btn btn-primary">Сохранить направление</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer text-center">
+        <span>Medakadem © 2019</span>
+    </footer>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+<script src="assets/js/jquery.datetimepicker.full.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
